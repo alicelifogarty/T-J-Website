@@ -1,0 +1,390 @@
+/*
+Project Name: Tiantian & Jay
+Author: Alice Li
+Developer and Designer
+*/
+
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+    -moz-box-sizing: border-box; /* Firexfox */
+    -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+    box-sizing: border-box; /* IE */
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    font-family: 'Fanwood Text', serif;
+    font-size:24px;
+}
+
+h1, h2, nav {
+    font-family: 'Quattrocento', serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h1 { 
+    font-size: 33px;
+}
+
+h2 {
+    font-size:26px;
+}
+
+a {
+    text-decoration: none;
+    color: #2C9F61;
+}
+
+a:hover {
+    color: white;
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom:25px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+.container {
+    margin: 0 auto;
+    max-width:960px;
+    width:100%;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section h1, .section h2 {
+    padding-bottom:20px;
+    color: #1A6A6B;
+}
+
+/* Navigation */
+
+header {
+    background-color: rgba(227,229,224,.9);
+    padding:30px 0;
+    width:100%; 
+}
+
+header .logo {
+    font-size: 30px;
+    color: #2C9F61;
+    text-align: left;
+    float:left;
+}
+
+header .mainNav ul {
+    list-style:none;
+    width: auto;
+}
+
+header .mainNav li {
+    display:inline-block;
+    float: right;
+}
+
+header .mainNav a,
+.mobileNav a {
+    color:black;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-right:20px;
+    letter-spacing: 1px;
+}
+
+header .mainNav a:hover,
+.mobileNav a:hover {
+    color: #2C9F61;
+}
+
+#toggler, .mobileNav {
+    display:none;
+}
+
+/* Hero */
+
+.hello {
+    position: relative;
+}
+
+.welcome {
+    z-index:999;
+    position:absolute;
+    padding:320px 297px
+}
+
+.welcome h1 {
+    font-size:42px;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding-bottom:10px;
+    color:black;
+}
+
+.welcome h2 {
+    line-height: 1.2;
+    font-size:30px;
+    padding-bottom:10px;
+    color:black;
+}
+
+.imgframe {
+    position:relative;
+}
+
+.frame {
+    z-index:15;
+    width:100%;
+}
+
+/* Story */
+
+.couple {
+    max-width:85%;
+    padding: 40px;
+    padding-left: 145px;
+}
+
+.words {
+    margin: 0 auto;
+    max-width:710px;
+    width:100%;
+}
+
+/*#story {
+    background-color: rgba(255,195,180,.2);
+}*/
+
+/* When */
+
+#when {
+    background-color: rgba(186,225,211,.61);
+    padding: 160px 100px;
+}
+
+.date, .place, footer p {
+    text-align: center;
+}
+
+.date {
+    font-size:60px;
+}
+
+/* Where */
+
+#where {
+    background-color: rgba(255,195,180,.2);
+}
+
+#where h2 {
+    color: #FF857E;
+}
+
+#where address {
+    line-height: 1.3;
+    margin-bottom:20px;
+}
+
+#where p {
+    font-style:italic;
+}
+
+/* Accomodations */
+
+#accomodations {
+    background-color: rgba(245,100,62,.7);
+}
+
+#accomodations h1 {
+    color: #F4DDCE;
+}
+
+/* Registry */
+
+#registry {
+    background-color: rgba(227,229,224,.5);
+}
+
+/* Footer */
+
+footer {
+    background-color: #B0D2CE;
+    font-size:20px;
+}
+
+footer.section {
+    padding: 50px 0;;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width:945px) {
+    .welcome {
+        padding: 246px 213px;
+    }
+}
+
+@media screen and (max-width:900px) {
+
+    .container {
+    margin: 0 auto;
+    max-width:800px;
+    width:100%;
+    }
+
+    #toggler {
+        display: inline;
+        float: right;
+        color:#2C9F61;
+        font-size:18px;
+    }
+
+    #toggler.peach {
+        color:#FF857E;
+    }
+
+    .mobileNav {
+        text-align: center;
+        float:none;
+        overflow:hidden;
+        background-color: rgba(227,229,224,.9); 
+        padding-bottom: 30px;
+        line-height: 1.2;
+    }
+
+    .mainNav {
+        display:none;
+    }
+
+   header .logo {
+        font-size:20px;
+    }
+
+    .welcome h1 {
+        font-size: 36px;
+    }
+
+    .welcome {
+        padding: 248px 243px;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    .welcome {
+        padding:170px 183px;
+    }
+
+    .container {
+    margin: 0 auto;
+    max-width:600px;
+    width:100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .welcome {
+        padding:180px 137px;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .welcome {
+        padding:127px 107px;
+    }
+
+    .container {
+    margin: 0 auto;
+    max-width:400px;
+    width:100%;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+        .welcome h1 {
+        font-size:20px;
+        margin-bottom: 0;
+    }
+
+    .welcome h2 {
+        font-size:18px;
+        margin-bottom: 0;
+    }
+
+    h1 { 
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size:20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .couple {
+        max-width:100%;
+        padding: 0px;
+        margin: 20px 0;
+    }
+
+    #when {
+        padding:100px;
+    }
+
+    .date {
+        font-size:36px;
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width:400px) {
+
+    .container {
+    margin: 0 auto;
+    max-width:300px;
+    width:100%;
+    }
+
+    .welcome {
+        padding: 73px 94px;
+    }
+
+}
